@@ -4,7 +4,7 @@ let portfolo_data = [
     date_:"5일",
     use_program:"Vscode , Figma",
     part:"100%",
-    img_: "/img/KYWA_FULL.png",
+    img_: "img/KYWA_FULL.png",
     href: "https://siblin123.github.io/KYWA/",
   },
   {
@@ -12,7 +12,7 @@ let portfolo_data = [
     date_:"5일",
     use_program:"Vscode , Figma",
     part:"헤더,메인 비주얼 <br>전시생물,티켓 예매",
-    img_: "/img/lotte world FULL.jpg",
+    img_: "img/lotte world FULL.jpg",
      href: "https://siblin123.github.io/aquarium/",
   },
   {
@@ -20,7 +20,7 @@ let portfolo_data = [
     date_:"5일",
     use_program:"Vscode , Figma",
     part:"100%",
-    img_: "/img/Daegwallyeong.png",
+    img_: "img/Daegwallyeong.png",
      href: "https://siblin123.github.io/Daegwallyeong-Music-Festival/",
   },
 ];
