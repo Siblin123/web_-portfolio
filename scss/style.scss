@@ -6,6 +6,7 @@
     font-style: normal;
   }
 }
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
 
 :root {
   --activeColor: #67AE6E;
@@ -72,14 +73,15 @@ header {
           gap: 50px;
 
           li {
-            a{
+            a {
               transition: .3s;
 
             }
-             &:hover a {
-                color: var(--activeColor);
 
-              }
+            &:hover a {
+              color: var(--activeColor);
+
+            }
           }
         }
       }
@@ -103,7 +105,7 @@ article {
       margin-bottom: 100px;
 
       .myImg {
-        width: 310px;
+        width: 580px;
         height: 390px;
 
         img {
@@ -123,40 +125,42 @@ article {
 
         .textInfo {
           // 소개글
-          font-size: 30px;
-          font-weight: 700;
-
+          font-size: 40px;
+          font-weight: 600;
+          
           span {
             color: #328E6E;
           }
         }
 
-        .specialty_ {
+        
+        .specialty_,.age_,.tel_{
+          margin-left: 10px;
           font-weight: 600;
-          // 전공
+          font-size: 20px;
+          span {
+            margin-left: 10px;
+            font-size: 18px;
+            font-weight: 300;
+          }
         }
 
-        .age_ {
-          font-weight: 600;
-          // 생년월일
-        }
-
-        .tel_ {
-          font-weight: 600;
-          // 전화번호
-        }
+     
 
         .skill {
           ul {
             display: flex;
-
+            align-items: center;
             li {
               img {
                 width: 50px;
                 height: 50px;
               }
 
-            
+              .swiper-icon{
+                width: 40px;
+                height: 40px;
+              }
             }
           }
         }
@@ -208,10 +212,11 @@ main {
       display: flex;
       flex-wrap: wrap;
       gap: 23px;
+      margin-bottom: 100px;
 
       .card {
         border: 1px solid rgb(158, 158, 158);
-        width: 30%;
+        width: 32%;
         margin-bottom: 30px;
 
         >img {
@@ -265,7 +270,8 @@ main {
     position: fixed;
     left: 50%;
     top: 50%;
-    width: 60%;
+    max-width: 1380px;
+    width: 90%;
     height: 90%;
     transform: translate(-50%, -50%);
     overflow-y: scroll;
@@ -294,6 +300,7 @@ main {
       .work-period,
       .use-program,
       .part {
+       
         // 프로젝트 기간
         display: flex;
         flex-direction: column;
@@ -307,6 +314,10 @@ main {
       .part {
         // 작업 파트
       }
+    }
+
+    .info-warps-mobile-inner{
+      display: none;
     }
 
     .view-Demo {
@@ -348,7 +359,7 @@ main {
     }
 
     position: fixed;
-    right:16%;
+    right:4%;
     top :6%;
     display: flex;
     flex-direction: column;
@@ -412,11 +423,41 @@ main {
     z-index: 1;
 
   }
+
+}
+.Contact-inner {
+  text-align: center;
+  h2 {
+    margin: 40px;
+  }
+
+  h4 {
+    margin-bottom: 20px;
+    font-size: 30px;
+  }
+
+  p {
+    font-size: 24px;
+  }
+
+  .contact-warps {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 100px;
+    gap: 20px;
+
+    i {}
+
+    span {
+      font-size: 24px;
+    }
+  }
 }
 
 @media screen and (max-width: 500px) {
   [class*="inner"] {
-    width: 100%;
+    width: 90%;
     margin: 0 auto; // 가운데 정렬할 경우
 
   }
@@ -482,8 +523,8 @@ main {
           gap: 20px;
 
           .textInfo {
+            font-size: 27px;
             // 소개글
-            font-size: 30px;
             font-weight: 700;
 
           }
@@ -639,10 +680,7 @@ main {
         // 정보 묶음 레이아웃
         display: flex;
         flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        text-align: center;
-
+        
         margin: 0 50px;
         gap: 50px;
 
@@ -650,22 +688,46 @@ main {
         .use-program,
         .part {
           // 프로젝트 기간
-          display: flex;
-          flex-direction: column;
-          gap: 10px;
-        }
+          display: none;
 
-        .use-program {
-          // 사용 프로그램
-        }
-
-        .part {
-          // 작업 파트
         }
       }
 
-      .view-Demo {
+      .info-warps-mobile-inner{
 
+        table{
+          border-collapse: collapse;
+          border: 1px solid #D5D2D2;
+          th,td{
+            padding: 5px 10px;
+          }
+        }
+        display: flex;
+        justify-content: center;
+        border-collapse: collapse;
+        flex-direction: column;
+        max-width: 70%;
+        gap: 10px ;
+        .view-site-btn{
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          margin: 20px 0;
+          .view-git-deco,  .view-Demo-deco{
+            border: 1px solid #D5D2D2;
+            padding: 5px 10px;
+            transition: .3s;
+            &:hover{
+              background-color: var(--hoverColor);
+            }
+          }
+        
+        }
+
+      }
+
+      .view-Demo {
+        display: none;
         // 데모 뷰 영역
         a {
           display: block;
@@ -777,6 +839,36 @@ main {
       background-color: rgba(0, 0, 0, 0.432);
       z-index: 1;
 
+    }
+  }
+
+  .Contact-inner {
+    text-align: center;
+    h2 {
+      margin: 30px;
+    }
+    
+    h4 {
+      margin-bottom: 20px;
+      font-size: 19px;
+    }
+
+    p {
+      font-size: 24px;
+    }
+
+    .contact-warps {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-bottom: 100px;
+      gap: 20px;
+
+      i {}
+
+      span {
+        font-size: 24px;
+      }
     }
   }
 

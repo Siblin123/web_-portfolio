@@ -8,6 +8,8 @@ let side_bar_Pc = document.querySelector(".PC");
 let side_bar_Mobile = document.querySelector(".Mobile");
 let fa_xmark = document.querySelectorAll(".fa-xmark");//x버튼
 let details = document.querySelectorAll(".details");//카드의 상세보기 버튼
+let info_warps_mobile_inner = document.querySelector(".info-warps-mobile-inner");
+
 //====================카테고리 =========================================
 all_Category_deco.forEach(Category => {
   // 마우스를 올렸을 때 (hover)
@@ -100,7 +102,7 @@ function openDetails() {
 
 
 
-//============================= 상세 보기 데이터 연결===================================
+//============================= 상세 보기 데이터 연결 pc===================================
 details.forEach(detail => {
   detail.addEventListener("click", (e) => {
     e.preventDefault();
@@ -114,6 +116,14 @@ details.forEach(detail => {
         document.querySelector(".part p").innerHTML = data[i].part;
         document.querySelector(".sample_Image img").src = data[i].img_;
         document.querySelector(".view-Demo a").href = data[i].href;
+        
+        // 모바일 상세보기 데이터 연결
+        document.querySelector(".people_M p").innerText = data[i].people;
+        document.querySelector(".work-period_M p").innerText = data[i].date_;
+        document.querySelector(".responsive_M p").innerText = data[i].responsive;
+        document.querySelector(".use_program_M p").innerText = data[i].use_program;
+        document.querySelector(".part_M p").innerHTML = data[i].part;
+        
         console.log("동일한게 있음");
         break;
       }
@@ -123,3 +133,5 @@ details.forEach(detail => {
 
   });
 });
+
+//============================= 상세 보기 데이터 연결 모바일===================================

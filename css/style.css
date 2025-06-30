@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
 @font-face {
   font-family: "SCDream";
   src: url("../font/SCDream1.otf") format("opentype");
@@ -136,7 +137,7 @@ article .article-inner .article-content {
   margin-bottom: 100px;
 }
 article .article-inner .article-content .myImg {
-  width: 310px;
+  width: 580px;
   height: 390px;
 }
 article .article-inner .article-content .myImg img {
@@ -160,29 +161,37 @@ article .article-inner .article-content .myinfo {
   gap: 20px;
 }
 article .article-inner .article-content .myinfo .textInfo {
-  font-size: 30px;
-  font-weight: 700;
+  font-size: 40px;
+  font-weight: 600;
 }
 article .article-inner .article-content .myinfo .textInfo span {
   color: #328E6E;
 }
-article .article-inner .article-content .myinfo .specialty_ {
+article .article-inner .article-content .myinfo .specialty_, article .article-inner .article-content .myinfo .age_, article .article-inner .article-content .myinfo .tel_ {
+  margin-left: 10px;
   font-weight: 600;
+  font-size: 20px;
 }
-article .article-inner .article-content .myinfo .age_ {
-  font-weight: 600;
-}
-article .article-inner .article-content .myinfo .tel_ {
-  font-weight: 600;
+article .article-inner .article-content .myinfo .specialty_ span, article .article-inner .article-content .myinfo .age_ span, article .article-inner .article-content .myinfo .tel_ span {
+  margin-left: 10px;
+  font-size: 18px;
+  font-weight: 300;
 }
 article .article-inner .article-content .myinfo .skill ul {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 article .article-inner .article-content .myinfo .skill ul li img {
   width: 50px;
   height: 50px;
+}
+article .article-inner .article-content .myinfo .skill ul li .swiper-icon {
+  width: 40px;
+  height: 40px;
 }
 
 main .main-inner .category-warps {
@@ -223,10 +232,11 @@ main .main-inner .card-warps {
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
   gap: 23px;
+  margin-bottom: 100px;
 }
 main .main-inner .card-warps .card {
   border: 1px solid rgb(158, 158, 158);
-  width: 30%;
+  width: 32%;
   margin-bottom: 30px;
 }
 main .main-inner .card-warps .card > img {
@@ -273,7 +283,8 @@ main .View-details {
   position: fixed;
   left: 50%;
   top: 50%;
-  width: 60%;
+  max-width: 1380px;
+  width: 90%;
   height: 90%;
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
@@ -310,6 +321,9 @@ main .View-details .info-warps .part {
           flex-direction: column;
   gap: 10px;
 }
+main .View-details .info-warps-mobile-inner {
+  display: none;
+}
 main .View-details .view-Demo a {
   width: 100px;
   display: block;
@@ -332,7 +346,7 @@ main .side-bar {
   background-color: rgba(51, 51, 51, 0.3137254902);
   padding: 10px;
   position: fixed;
-  right: 16%;
+  right: 4%;
   top: 6%;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -398,9 +412,39 @@ main .side-bar .demo .fa-paperclip:hover {
   z-index: 1;
 }
 
+.Contact-inner {
+  text-align: center;
+}
+.Contact-inner h2 {
+  margin: 40px;
+}
+.Contact-inner h4 {
+  margin-bottom: 20px;
+  font-size: 30px;
+}
+.Contact-inner p {
+  font-size: 24px;
+}
+.Contact-inner .contact-warps {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-bottom: 100px;
+  gap: 20px;
+}
+.Contact-inner .contact-warps span {
+  font-size: 24px;
+}
+
 @media screen and (max-width: 500px) {
   [class*=inner] {
-    width: 100%;
+    width: 90%;
     margin: 0 auto;
   }
   header .header-inner .header-contant {
@@ -460,7 +504,7 @@ main .side-bar .demo .fa-paperclip:hover {
     gap: 20px;
   }
   article .article-inner .article-content .myinfo .textInfo {
-    font-size: 30px;
+    font-size: 27px;
     font-weight: 700;
   }
   article .article-inner .article-content .myinfo .specialty_ {
@@ -587,27 +631,59 @@ main .side-bar .demo .fa-paperclip:hover {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    text-align: center;
     margin: 0 50px;
     gap: 50px;
   }
   main .View-details .info-warps .work-period,
   main .View-details .info-warps .use-program,
   main .View-details .info-warps .part {
+    display: none;
+  }
+  main .View-details .info-warps-mobile-inner {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    border-collapse: collapse;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
+    max-width: 70%;
     gap: 10px;
+  }
+  main .View-details .info-warps-mobile-inner table {
+    border-collapse: collapse;
+    border: 1px solid #D5D2D2;
+  }
+  main .View-details .info-warps-mobile-inner table th, main .View-details .info-warps-mobile-inner table td {
+    padding: 5px 10px;
+  }
+  main .View-details .info-warps-mobile-inner .view-site-btn {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    margin: 20px 0;
+  }
+  main .View-details .info-warps-mobile-inner .view-site-btn .view-git-deco, main .View-details .info-warps-mobile-inner .view-site-btn .view-Demo-deco {
+    border: 1px solid #D5D2D2;
+    padding: 5px 10px;
+    -webkit-transition: 0.3s;
+    transition: 0.3s;
+  }
+  main .View-details .info-warps-mobile-inner .view-site-btn .view-git-deco:hover, main .View-details .info-warps-mobile-inner .view-site-btn .view-Demo-deco:hover {
+    background-color: var(--hoverColor);
+  }
+  main .View-details .view-Demo {
+    display: none;
   }
   main .View-details .view-Demo a {
     display: block;
@@ -709,5 +785,34 @@ main .side-bar .demo .fa-paperclip:hover {
     height: 100%;
     background-color: rgba(0, 0, 0, 0.432);
     z-index: 1;
+  }
+  .Contact-inner {
+    text-align: center;
+  }
+  .Contact-inner h2 {
+    margin: 30px;
+  }
+  .Contact-inner h4 {
+    margin-bottom: 20px;
+    font-size: 19px;
+  }
+  .Contact-inner p {
+    font-size: 24px;
+  }
+  .Contact-inner .contact-warps {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    margin-bottom: 100px;
+    gap: 20px;
+  }
+  .Contact-inner .contact-warps span {
+    font-size: 24px;
   }
 }
