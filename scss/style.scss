@@ -9,6 +9,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
 
 :root {
+  --categoryActiveColor : rgb(24, 24, 24);
+  --categoryHoverColor : rgb(129, 129, 129);
   --nameColor:#00809D;
   --activeColor: #4682A9;
   --hoverColor: #91C8E4;
@@ -202,8 +204,8 @@ main {
           transition: .3s;
 
           &:hover {
-            background-color: var(--hoverColor);
-            border-color:var(--hoverColor);
+            background-color: var(--categoryHoverColor);
+            border-color:var(--categoryHoverColor);
 
             color:white;
           }
@@ -213,8 +215,8 @@ main {
           transition: .3s;
 
           a {
-            background-color: var(--activeColor);
-            border-color:var(var(--activeColor));
+            background-color: var(--categoryActiveColor);
+            border-color:var(var(--categoryActiveColor));
             color: white;
           }
         }
@@ -626,15 +628,15 @@ a{
             padding: 5px 25px;
 
             &:hover {
-              background-color: var(--hoverColor);
-              border-color: var(--hoverColor);
+              background-color: var(--categoryHoverColor);
+            border-color:var(--categoryHoverColor);
             }
           }
 
           &.active {
             a {
-              background-color: var(--activeColor);
-              border-color: var(--activeColor);
+              background-color: var(--categoryActiveColor);
+              border-color:var(--categoryActiveColor);
             }
           }
         }

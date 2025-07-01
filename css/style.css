@@ -54,6 +54,8 @@
   font-style: normal;
 }
 :root {
+  --categoryActiveColor: rgb(24, 24, 24);
+  --categoryHoverColor: rgb(129, 129, 129);
   --nameColor:#00809D;
   --activeColor: #4682A9;
   --hoverColor: #91C8E4;
@@ -225,8 +227,8 @@ main .main-inner .category-warps .category-deco a {
   transition: 0.3s;
 }
 main .main-inner .category-warps .category-deco a:hover {
-  background-color: var(--hoverColor);
-  border-color: var(--hoverColor);
+  background-color: var(--categoryHoverColor);
+  border-color: var(--categoryHoverColor);
   color: white;
 }
 main .main-inner .category-warps .category-deco.active {
@@ -234,8 +236,8 @@ main .main-inner .category-warps .category-deco.active {
   transition: 0.3s;
 }
 main .main-inner .category-warps .category-deco.active a {
-  background-color: var(--activeColor);
-  border-color: var(var(--activeColor));
+  background-color: var(--categoryActiveColor);
+  border-color: var(var(--categoryActiveColor));
   color: white;
 }
 main .main-inner .card-warps {
@@ -588,12 +590,12 @@ main .side-bar .demo .fa-paperclip:hover {
     padding: 5px 25px;
   }
   main .main-inner .category-warps .category-deco a:hover {
-    background-color: var(--hoverColor);
-    border-color: var(--hoverColor);
+    background-color: var(--categoryHoverColor);
+    border-color: var(--categoryHoverColor);
   }
   main .main-inner .category-warps .category-deco.active a {
-    background-color: var(--activeColor);
-    border-color: var(--activeColor);
+    background-color: var(--categoryActiveColor);
+    border-color: var(--categoryActiveColor);
   }
   main .main-inner .card-warps {
     display: -webkit-box;
