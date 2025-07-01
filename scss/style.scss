@@ -88,6 +88,7 @@ header {
 
             &:hover a {
               color: var(--activeColor);
+              border-color:var(--activeColor);
 
             }
           }
@@ -202,6 +203,8 @@ main {
 
           &:hover {
             background-color: var(--hoverColor);
+            border-color:var(var(--hoverColor));
+
             color:white;
           }
         }
@@ -211,6 +214,7 @@ main {
 
           a {
             background-color: var(--activeColor);
+            border-color:var(var(--activeColor));
             color: white;
           }
         }
@@ -245,6 +249,14 @@ main {
           }
 
           .a-deco {
+            &.DEMO{
+              a{
+                background-color: var(--activeColor);
+                border-color: var(--activeColor);
+
+                color: white;
+              }
+            }
             a {
               border: 1px solid rgb(158, 158, 158);
               padding: 5px 20px;
@@ -253,6 +265,7 @@ main {
               &:hover {
                 background-color: var(--hoverColor);
                 color: white;
+                border-color: var(--hoverColor);
               }
             }
 
@@ -397,17 +410,19 @@ main {
     .github {
       font-size: 30px;
       cursor: pointer;
+a{
+  color: white;
+  // 깃허브 버튼
+  i {
+    // 깃허브 아이콘
+    transition: .3s;
+    display: block;
 
-      // 깃허브 버튼
-      i {
-        // 깃허브 아이콘
-        transition: .3s;
-        display: block;
-
-        &:hover {
-          filter: invert(1)
-        }
-      }
+    &:hover {
+      filter: invert(1)
+    }
+  }
+}
     }
 
     .demo {
@@ -608,14 +623,15 @@ main {
             padding: 5px 25px;
 
             &:hover {
-              background-color: var(--hoverColor)
+              background-color: var(--hoverColor);
+              border-color: var(--hoverColor);
             }
           }
 
           &.active {
             a {
               background-color: var(--activeColor);
-
+              border-color: var(--activeColor);
             }
           }
         }
@@ -649,9 +665,17 @@ main {
             }
 
             .a-deco {
+
+              &.DEMO{
+                a{
+                  background-color: var(--activeColor);
+                  border-color: var(--activeColor);
+                }
+              }
+
               a {
                 border: 1px solid rgb(158, 158, 158);
-                padding: 5px 20px;
+                padding: 5px 10px;
                 transition: .3s;
 
                 &:hover {

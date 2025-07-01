@@ -125,7 +125,9 @@ details.forEach(detail => {
         document.querySelector(".part p").innerHTML = data[i].part;
         document.querySelector(".sample_Image img").src = data[i].img_;
         document.querySelector(".view-Demo a").href = data[i].href;
-        
+        document.querySelector(".github a").href=data[i].Github_;
+        document.querySelector(".demo a").href=data[i].Demo_;
+
         // 모바일 상세보기 데이터 연결
         document.querySelector(".people_M p").innerText = data[i].people;
         document.querySelector(".work-period_M p").innerText = data[i].date_;

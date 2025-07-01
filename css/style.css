@@ -130,6 +130,7 @@ header .header-inner .header-contant nav ul li a {
 }
 header .header-inner .header-contant nav ul li:hover a {
   color: var(--activeColor);
+  border-color: var(--activeColor);
 }
 
 article .article-inner .article-content {
@@ -225,6 +226,7 @@ main .main-inner .category-warps .category-deco a {
 }
 main .main-inner .category-warps .category-deco a:hover {
   background-color: var(--hoverColor);
+  border-color: var(var(--hoverColor));
   color: white;
 }
 main .main-inner .category-warps .category-deco.active {
@@ -233,6 +235,7 @@ main .main-inner .category-warps .category-deco.active {
 }
 main .main-inner .category-warps .category-deco.active a {
   background-color: var(--activeColor);
+  border-color: var(var(--activeColor));
   color: white;
 }
 main .main-inner .card-warps {
@@ -270,6 +273,11 @@ main .main-inner .card-warps .card .contant-warp1 {
 main .main-inner .card-warps .card .contant-warp1 p {
   font-weight: 600;
 }
+main .main-inner .card-warps .card .contant-warp1 .a-deco.DEMO a {
+  background-color: var(--activeColor);
+  border-color: var(--activeColor);
+  color: white;
+}
 main .main-inner .card-warps .card .contant-warp1 .a-deco a {
   border: 1px solid rgb(158, 158, 158);
   padding: 5px 20px;
@@ -279,6 +287,7 @@ main .main-inner .card-warps .card .contant-warp1 .a-deco a {
 main .main-inner .card-warps .card .contant-warp1 .a-deco a:hover {
   background-color: var(--hoverColor);
   color: white;
+  border-color: var(--hoverColor);
 }
 main .main-inner .card-warps .card .contant-warp1 ul {
   display: -webkit-box;
@@ -397,12 +406,15 @@ main .side-bar .github {
   font-size: 30px;
   cursor: pointer;
 }
-main .side-bar .github i {
+main .side-bar .github a {
+  color: white;
+}
+main .side-bar .github a i {
   -webkit-transition: 0.3s;
   transition: 0.3s;
   display: block;
 }
-main .side-bar .github i:hover {
+main .side-bar .github a i:hover {
   -webkit-filter: invert(1);
           filter: invert(1);
 }
@@ -575,9 +587,11 @@ main .side-bar .demo .fa-paperclip:hover {
   }
   main .main-inner .category-warps .category-deco a:hover {
     background-color: var(--hoverColor);
+    border-color: var(--hoverColor);
   }
   main .main-inner .category-warps .category-deco.active a {
     background-color: var(--activeColor);
+    border-color: var(--activeColor);
   }
   main .main-inner .card-warps {
     display: -webkit-box;
@@ -616,9 +630,13 @@ main .side-bar .demo .fa-paperclip:hover {
   main .main-inner .card-warps .card .contant-warp1 p {
     font-weight: 600;
   }
+  main .main-inner .card-warps .card .contant-warp1 .a-deco.DEMO a {
+    background-color: var(--activeColor);
+    border-color: var(--activeColor);
+  }
   main .main-inner .card-warps .card .contant-warp1 .a-deco a {
     border: 1px solid rgb(158, 158, 158);
-    padding: 5px 20px;
+    padding: 5px 10px;
     -webkit-transition: 0.3s;
     transition: 0.3s;
   }
