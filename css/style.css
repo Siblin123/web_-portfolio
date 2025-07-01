@@ -226,7 +226,7 @@ main .main-inner .category-warps .category-deco a {
 }
 main .main-inner .category-warps .category-deco a:hover {
   background-color: var(--hoverColor);
-  border-color: var(var(--hoverColor));
+  border-color: var(--hoverColor);
   color: white;
 }
 main .main-inner .category-warps .category-deco.active {
