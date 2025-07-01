@@ -750,8 +750,8 @@ a{
         max-width: 70%;
         gap: 10px ;
 
-  
-
+        
+        
         table{
           width: 100%;
           border-collapse: collapse;
@@ -763,20 +763,30 @@ a{
         .view-site-btn{
           width: 100%;
           display: flex;
-          justify-content: space-between;
+          justify-content: space-around;
           align-items: center;
           margin: 20px 0;
           .view-git-deco,  .view-Demo-deco{
+            flex: 1;
+            text-align: center;
             border: 1px solid #D5D2D2;
             padding: 5px 10px;
             transition: .3s;
             &:hover{
               background-color: var(--hoverColor);
+              border-color: var(--hoverColor) ;
+              a{
+                color: white;
+
+              }
             }
           }
         
         }
 
+      }
+      .view-git-deco{
+        margin-right: 10%;
       }
 
       .view-Demo {
@@ -789,7 +799,7 @@ a{
           padding: 10px 20px;
           text-align: center;
           border: 1px solid #000;
-
+          
         }
       }
 

@@ -715,15 +715,18 @@ main .View-details .info-warps .part {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
     margin: 20px 0;
   }
   main .View-details .info-warps-mobile-inner .view-site-btn .view-git-deco, main .View-details .info-warps-mobile-inner .view-site-btn .view-Demo-deco {
+    -webkit-box-flex: 1;
+        -ms-flex: 1;
+            flex: 1;
+    text-align: center;
     border: 1px solid #D5D2D2;
     padding: 5px 10px;
     -webkit-transition: 0.3s;
@@ -731,6 +734,13 @@ main .View-details .info-warps .part {
   }
   main .View-details .info-warps-mobile-inner .view-site-btn .view-git-deco:hover, main .View-details .info-warps-mobile-inner .view-site-btn .view-Demo-deco:hover {
     background-color: var(--hoverColor);
+    border-color: var(--hoverColor);
+  }
+  main .View-details .info-warps-mobile-inner .view-site-btn .view-git-deco:hover a, main .View-details .info-warps-mobile-inner .view-site-btn .view-Demo-deco:hover a {
+    color: white;
+  }
+  main .View-details .view-git-deco {
+    margin-right: 10%;
   }
   main .View-details .view-Demo {
     display: none;
