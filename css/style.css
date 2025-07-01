@@ -353,9 +353,11 @@ main .View-details .view-Demo a {
   border: 1px solid #333;
   -webkit-transition: 0.3s;
   transition: 0.3s;
+  border-radius: 3px;
 }
 main .View-details .view-Demo a:hover {
   background-color: var(--hoverColor);
+  border-color: var(--hoverColor);
   color: white;
 }
 main .View-details .sample_Image {

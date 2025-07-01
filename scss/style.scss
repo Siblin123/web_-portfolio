@@ -354,9 +354,12 @@ main {
         text-align: center;
         border: 1px solid #333;
         transition: .3s;
+        border-radius: 3px;
         &:hover{
           background-color: var(--hoverColor);
-          color: white;
+          border-color: var(--hoverColor);
+            color: white;
+
         }
       }
     }
