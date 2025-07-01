@@ -9,8 +9,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
 
 :root {
-  --activeColor: #67AE6E;
-  --hoverColor: #E1EEBC;
+  --nameColor:#00809D;
+  --activeColor: #4682A9;
+  --hoverColor: #91C8E4;
   --decoColor: #333;
 }
 
@@ -37,6 +38,11 @@ a {
 
 [class*="deco"] {
   border-radius: 3px;
+  
+  a{
+    
+    border-radius: 3px;
+  }
 }
 
 [class*="inner"] {
@@ -56,14 +62,16 @@ header {
   .header-inner {
     .header-contant {
       display: flex;
-      justify-content: right;
+      justify-content: space-between;
       height: 60px;
       margin-bottom: 200px;
+      align-items: center;
 
-      img.home {
-        // 로고 스타일
-        height: 60px;
-        width: 60px;
+     .logo {
+       font-size: 25px;
+       padding: 5px;
+       font-weight: bold;
+       display: block;
       }
 
       nav {
@@ -129,7 +137,7 @@ article {
           font-weight: 600;
           
           span {
-            color: #328E6E;
+            color:var(--nameColor);
           }
         }
 
@@ -193,7 +201,8 @@ main {
           transition: .3s;
 
           &:hover {
-            background-color: var(--hoverColor)
+            background-color: var(--hoverColor);
+            color:white;
           }
         }
 
@@ -243,6 +252,7 @@ main {
 
               &:hover {
                 background-color: var(--hoverColor);
+                color: white;
               }
             }
 
@@ -324,23 +334,28 @@ main {
 
       // 데모 뷰 영역
       a {
-
         width: 100px;
         display: block;
         margin: 50px auto;
         padding: 10px 20px;
         text-align: center;
-        border: 1px solid #000;
+        border: 1px solid #333;
+        transition: .3s;
+        &:hover{
+          background-color: var(--hoverColor);
+          color: white;
+        }
       }
     }
 
     .sample_Image {
       width: 90%;
       margin: auto;
-
+      
       img {
         width: 100%;
         object-fit: cover;
+        margin-bottom: 100px;
       }
     }
   }
@@ -445,9 +460,10 @@ main {
     justify-content: center;
     align-items: center;
     margin-bottom: 100px;
+
     gap: 20px;
 
-    i {}
+    i {font-size: 25px;}
 
     span {
       font-size: 24px;
@@ -469,6 +485,13 @@ main {
         justify-content: center;
         height: 60px;
         margin-bottom: 200px;
+
+        .logo {
+          font-size: 25px;
+          padding: 5px;
+          font-weight: bold;
+          display: none;
+         }
 
         nav {
           ul {
@@ -695,20 +718,26 @@ main {
 
       .info-warps-mobile-inner{
 
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-collapse: collapse;
+        flex-direction: column;
+        max-width: 70%;
+        gap: 10px ;
+
+  
+
         table{
+          width: 100%;
           border-collapse: collapse;
           border: 1px solid #D5D2D2;
           th,td{
             padding: 5px 10px;
           }
         }
-        display: flex;
-        justify-content: center;
-        border-collapse: collapse;
-        flex-direction: column;
-        max-width: 70%;
-        gap: 10px ;
         .view-site-btn{
+          width: 100%;
           display: flex;
           justify-content: space-between;
           align-items: center;
