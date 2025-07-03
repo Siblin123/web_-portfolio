@@ -38,4 +38,17 @@ let portfolo_data = [
     Github_:"https://github.com/Siblin123/Daegwallyeong-Music-Festival",
     responsive:"제작"
   },
+  {
+    work_thub_ : "img/AirClass.png",
+    people :"1",
+    title_: "AirClass",
+    date_:"5일",
+    use_program:"Vscode , Figma",
+    part:"100%",
+    img_: "img/AirClass_FULL.png",
+    href: "https://siblin123.github.io/AirClass/",
+    Demo_:"https://siblin123.github.io/AirClass/",
+    Github_:"https://github.com/Siblin123/AirClass",
+    responsive:"제작"
+  },
 ];
