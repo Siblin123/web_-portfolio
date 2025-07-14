@@ -6,12 +6,13 @@
     font-style: normal;
   }
 }
+
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
 
 :root {
-  --categoryActiveColor : rgb(24, 24, 24);
-  --categoryHoverColor : rgb(129, 129, 129);
-  --nameColor:#00809D;
+  --categoryActiveColor: rgb(24, 24, 24);
+  --categoryHoverColor: rgb(129, 129, 129);
+  --nameColor: #00809D;
   --activeColor: #4682A9;
   --hoverColor: #91C8E4;
   --decoColor: #333;
@@ -40,9 +41,9 @@ a {
 
 [class*="deco"] {
   border-radius: 3px;
-  
-  a{
-    
+
+  a {
+
     border-radius: 3px;
   }
 }
@@ -61,6 +62,15 @@ a {
 
 
 header {
+  position: relative;
+  .header-contant-line {
+    position: absolute;
+    border-bottom: 1px solid #333;
+    top: 57px;
+    left: 0;
+    right: 0;
+  }
+
   .header-inner {
     .header-contant {
       display: flex;
@@ -69,11 +79,11 @@ header {
       margin-bottom: 200px;
       align-items: center;
 
-     .logo {
-       font-size: 25px;
-       padding: 5px;
-       font-weight: bold;
-       display: block;
+      .logo {
+        font-size: 25px;
+        padding: 5px;
+        font-weight: bold;
+        display: block;
       }
 
       nav {
@@ -90,7 +100,7 @@ header {
 
             &:hover a {
               color: var(--activeColor);
-              border-color:var(--activeColor);
+              border-color: var(--activeColor);
 
             }
           }
@@ -138,17 +148,20 @@ article {
           // 소개글
           font-size: 40px;
           font-weight: 600;
-          
+
           span {
-            color:var(--nameColor);
+            color: var(--nameColor);
           }
         }
 
-        
-        .specialty_,.age_,.tel_{
+
+        .specialty_,
+        .age_,
+        .tel_ {
           margin-left: 10px;
           font-weight: 600;
           font-size: 20px;
+
           span {
             margin-left: 10px;
             font-size: 18px;
@@ -156,19 +169,26 @@ article {
           }
         }
 
-     
+
 
         .skill {
           ul {
             display: flex;
             align-items: center;
+            gap: 10px;
+
             li {
               img {
                 width: 50px;
                 height: 50px;
               }
 
-              .swiper-icon{
+              .swiper-icon {
+                width: 40px;
+                height: 40px;
+              }
+
+              .icon-40 {
                 width: 40px;
                 height: 40px;
               }
@@ -205,9 +225,9 @@ main {
 
           &:hover {
             background-color: var(--categoryHoverColor);
-            border-color:var(--categoryHoverColor);
+            border-color: var(--categoryHoverColor);
 
-            color:white;
+            color: white;
           }
         }
 
@@ -216,7 +236,7 @@ main {
 
           a {
             background-color: var(--categoryActiveColor);
-            border-color:var(var(--categoryActiveColor));
+            border-color: var(var(--categoryActiveColor));
             color: white;
           }
         }
@@ -251,14 +271,15 @@ main {
           }
 
           .a-deco {
-            &.DEMO{
-              a{
+            &.DEMO {
+              a {
                 background-color: var(--activeColor);
                 border-color: var(--activeColor);
 
                 color: white;
               }
             }
+
             a {
               border: 1px solid rgb(158, 158, 158);
               padding: 5px 20px;
@@ -325,7 +346,7 @@ main {
       .work-period,
       .use-program,
       .part {
-       
+
         // 프로젝트 기간
         display: flex;
         flex-direction: column;
@@ -341,7 +362,7 @@ main {
       }
     }
 
-    .info-warps-mobile-inner{
+    .info-warps-mobile-inner {
       display: none;
     }
 
@@ -357,10 +378,11 @@ main {
         border: 1px solid #333;
         transition: .3s;
         border-radius: 3px;
-        &:hover{
+
+        &:hover {
           background-color: var(--hoverColor);
           border-color: var(--hoverColor);
-            color: white;
+          color: white;
 
         }
       }
@@ -369,7 +391,7 @@ main {
     .sample_Image {
       width: 90%;
       margin: auto;
-      
+
       img {
         width: 100%;
         object-fit: cover;
@@ -415,19 +437,21 @@ main {
     .github {
       font-size: 30px;
       cursor: pointer;
-a{
-  color: white;
-  // 깃허브 버튼
-  i {
-    // 깃허브 아이콘
-    transition: .3s;
-    display: block;
 
-    &:hover {
-      filter: invert(1)
-    }
-  }
-}
+      a {
+        color: white;
+
+        // 깃허브 버튼
+        i {
+          // 깃허브 아이콘
+          transition: .3s;
+          display: block;
+
+          &:hover {
+            filter: invert(1)
+          }
+        }
+      }
     }
 
     .demo {
@@ -460,8 +484,10 @@ a{
   }
 
 }
+
 .Contact-inner {
   text-align: center;
+
   h2 {
     margin: 40px;
   }
@@ -483,7 +509,9 @@ a{
 
     gap: 20px;
 
-    i {font-size: 25px;}
+    i {
+      font-size: 25px;
+    }
 
     span {
       font-size: 24px;
@@ -511,7 +539,7 @@ a{
           padding: 5px;
           font-weight: bold;
           display: none;
-         }
+        }
 
         nav {
           ul {
@@ -591,11 +619,14 @@ a{
             ul {
               display: flex;
               justify-content: center;
+              gap: 10px;
 
               li {
                 img {
                   width: 50px;
                   height: 50px;
+
+
                 }
               }
             }
@@ -629,14 +660,14 @@ a{
 
             &:hover {
               background-color: var(--categoryHoverColor);
-            border-color:var(--categoryHoverColor);
+              border-color: var(--categoryHoverColor);
             }
           }
 
           &.active {
             a {
               background-color: var(--categoryActiveColor);
-              border-color:var(--categoryActiveColor);
+              border-color: var(--categoryActiveColor);
             }
           }
         }
@@ -671,8 +702,8 @@ a{
 
             .a-deco {
 
-              &.DEMO{
-                a{
+              &.DEMO {
+                a {
                   background-color: var(--activeColor);
                   border-color: var(--activeColor);
                 }
@@ -732,7 +763,7 @@ a{
         // 정보 묶음 레이아웃
         display: flex;
         flex-direction: column;
-        
+
         margin: 0 50px;
         gap: 50px;
 
@@ -745,7 +776,7 @@ a{
         }
       }
 
-      .info-warps-mobile-inner{
+      .info-warps-mobile-inner {
 
         display: flex;
         justify-content: center;
@@ -753,49 +784,58 @@ a{
         border-collapse: collapse;
         flex-direction: column;
         max-width: 70%;
-        gap: 10px ;
+        gap: 10px;
 
-        
-        
-        table{
+
+
+        table {
           width: 100%;
           border-collapse: collapse;
           border: 1px solid #D5D2D2;
-          th,td{
+
+          th,
+          td {
             padding: 5px 10px;
           }
         }
-        .view-site-btn{
+
+        .view-site-btn {
           width: 100%;
           display: flex;
           justify-content: space-around;
           align-items: center;
           margin: 20px 0;
-          .view-git-deco,  .view-Demo-deco{
+
+          .view-git-deco,
+          .view-Demo-deco {
             flex: 1;
             text-align: center;
             border: 1px solid #D5D2D2;
             padding: 5px 10px;
             transition: .3s;
-            &:hover{
+
+            &:hover {
               background-color: var(--hoverColor);
-              border-color: var(--hoverColor) ;
-              a{
+              border-color: var(--hoverColor);
+
+              a {
                 color: white;
 
               }
             }
           }
-        
+
         }
 
       }
-      .view-git-deco{
+
+      .view-git-deco {
         margin-right: 10%;
       }
 
       .view-Demo {
         display: none;
+
         // 데모 뷰 영역
         a {
           display: block;
@@ -804,7 +844,7 @@ a{
           padding: 10px 20px;
           text-align: center;
           border: 1px solid #000;
-          
+
         }
       }
 
@@ -912,10 +952,11 @@ a{
 
   .Contact-inner {
     text-align: center;
+
     h2 {
       margin: 30px;
     }
-    
+
     h4 {
       margin-bottom: 20px;
       font-size: 19px;

@@ -56,7 +56,7 @@
 :root {
   --categoryActiveColor: rgb(24, 24, 24);
   --categoryHoverColor: rgb(129, 129, 129);
-  --nameColor:#00809D;
+  --nameColor: #00809D;
   --activeColor: #4682A9;
   --hoverColor: #91C8E4;
   --decoColor: #333;
@@ -100,6 +100,16 @@ a {
   font-size: 35px;
 }
 
+header {
+  position: relative;
+}
+header .header-contant-line {
+  position: absolute;
+  border-bottom: 1px solid #333;
+  top: 57px;
+  left: 0;
+  right: 0;
+}
 header .header-inner .header-contant {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -179,12 +189,16 @@ article .article-inner .article-content .myinfo .textInfo {
 article .article-inner .article-content .myinfo .textInfo span {
   color: var(--nameColor);
 }
-article .article-inner .article-content .myinfo .specialty_, article .article-inner .article-content .myinfo .age_, article .article-inner .article-content .myinfo .tel_ {
+article .article-inner .article-content .myinfo .specialty_,
+article .article-inner .article-content .myinfo .age_,
+article .article-inner .article-content .myinfo .tel_ {
   margin-left: 10px;
   font-weight: 600;
   font-size: 20px;
 }
-article .article-inner .article-content .myinfo .specialty_ span, article .article-inner .article-content .myinfo .age_ span, article .article-inner .article-content .myinfo .tel_ span {
+article .article-inner .article-content .myinfo .specialty_ span,
+article .article-inner .article-content .myinfo .age_ span,
+article .article-inner .article-content .myinfo .tel_ span {
   margin-left: 10px;
   font-size: 18px;
   font-weight: 300;
@@ -196,12 +210,17 @@ article .article-inner .article-content .myinfo .skill ul {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  gap: 10px;
 }
 article .article-inner .article-content .myinfo .skill ul li img {
   width: 50px;
   height: 50px;
 }
 article .article-inner .article-content .myinfo .skill ul li .swiper-icon {
+  width: 40px;
+  height: 40px;
+}
+article .article-inner .article-content .myinfo .skill ul li .icon-40 {
   width: 40px;
   height: 40px;
 }
@@ -566,6 +585,7 @@ main .side-bar .demo .fa-paperclip:hover {
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
+    gap: 10px;
   }
   article .article-inner .article-content .myinfo .skill ul li img {
     width: 50px;
@@ -711,7 +731,8 @@ main .View-details .info-warps .part {
     border-collapse: collapse;
     border: 1px solid #D5D2D2;
   }
-  main .View-details .info-warps-mobile-inner table th, main .View-details .info-warps-mobile-inner table td {
+  main .View-details .info-warps-mobile-inner table th,
+main .View-details .info-warps-mobile-inner table td {
     padding: 5px 10px;
   }
   main .View-details .info-warps-mobile-inner .view-site-btn {
@@ -726,7 +747,8 @@ main .View-details .info-warps .part {
             align-items: center;
     margin: 20px 0;
   }
-  main .View-details .info-warps-mobile-inner .view-site-btn .view-git-deco, main .View-details .info-warps-mobile-inner .view-site-btn .view-Demo-deco {
+  main .View-details .info-warps-mobile-inner .view-site-btn .view-git-deco,
+main .View-details .info-warps-mobile-inner .view-site-btn .view-Demo-deco {
     -webkit-box-flex: 1;
         -ms-flex: 1;
             flex: 1;
@@ -736,11 +758,13 @@ main .View-details .info-warps .part {
     -webkit-transition: 0.3s;
     transition: 0.3s;
   }
-  main .View-details .info-warps-mobile-inner .view-site-btn .view-git-deco:hover, main .View-details .info-warps-mobile-inner .view-site-btn .view-Demo-deco:hover {
+  main .View-details .info-warps-mobile-inner .view-site-btn .view-git-deco:hover,
+main .View-details .info-warps-mobile-inner .view-site-btn .view-Demo-deco:hover {
     background-color: var(--hoverColor);
     border-color: var(--hoverColor);
   }
-  main .View-details .info-warps-mobile-inner .view-site-btn .view-git-deco:hover a, main .View-details .info-warps-mobile-inner .view-site-btn .view-Demo-deco:hover a {
+  main .View-details .info-warps-mobile-inner .view-site-btn .view-git-deco:hover a,
+main .View-details .info-warps-mobile-inner .view-site-btn .view-Demo-deco:hover a {
     color: white;
   }
   main .View-details .view-git-deco {
